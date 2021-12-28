@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    float xValue = 0f,
+    [SerializeField] float xValue = 0f,
     yValue = 0.01f,
     zValue = 0f;
 
