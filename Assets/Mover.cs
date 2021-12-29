@@ -10,11 +10,13 @@ public class Mover : MonoBehaviour
 
     }
 
+    [SerializeField] float moveSpeed = 10;
+
     // Update is called once per frame
     void Update()
     {
-        float xValue = Input.GetAxis("Horizontal") * 0.1f,
-        zValue = Input.GetAxis("Vertical") * 0.1f;
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed,
+        zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
         transform.Translate(xValue, 0, zValue);
     }
 }
